@@ -14,10 +14,15 @@ Inaccurate Inventory(what’s in stock and out of stock)
 Memberships are not being paid for
 Keep track of events (private and public)
 
+## Installation and Setup
+
+## Usage Examples For Key Functions
+
+## Function Library Overview/Organization
 
 
 ## Team Roles and Contributions
-Mariam Diaby:
+Mariam Diaby: Project Overview
 Kaelyn Naih: 
 Vainqueur Mukenyi: 
 Anyi Tasong:
