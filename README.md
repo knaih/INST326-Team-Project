@@ -1,3 +1,10 @@
 # INST326-Team-Project
-Vainqueur is editing
-Library management is our domain. 
+Library Management System -  A system that updates constantly to help librarians track items smoothly. 
+
+Roles:
+Mariam Diaby - 
+Kaelyn Naih - 
+Vainqueur Mukenyi - 
+Anyi Tasong - 
+
+
