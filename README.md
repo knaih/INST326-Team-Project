@@ -12,8 +12,8 @@ The project focuses on the domain of Library and Information Management. It will
 
 
 
-Roles:
-Mariam Diaby - 
-Kaelyn Naih - 
-Vainqueur Mukenyi - 
-Anyi Tasong - 
+## Team Roles and Contributions
+Mariam Diaby:
+Kaelyn Naih: 
+Vainqueur Mukenyi: 
+Anyi Tasong:
