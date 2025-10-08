@@ -7,4 +7,4 @@ Kaelyn Naih -
 Vainqueur Mukenyi - 
 Anyi Tasong - 
 
-
+The project focuses on the domain of Library and Information Management.
