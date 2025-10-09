@@ -31,6 +31,28 @@ from [] import add_books, search_books, validate_isbn
 
 ## Function Library Overview/Organization
 
+Our library contains  15 specialized functions organized into four categories:
+
+#### Inventory Management (6 Functions)
+- `total_books()` - Count total number of books in the library
+- `book_titles()` - Return a list of all book titles
+- `add_books()` - Add any new books to the inventory
+-`remove_books()` - Remove a book from the inventory using ISBN
+- `update_book_info()` - Update a book's details based on ISBN
+- `books_checked_out()` - Count the total number of books checked out library
+
+#### Member Management (3 Functions)
+- `check_membership()` - Verify if member is active or inactive
+- `fine_amount()` - Calculate the fine for overdue books
+- `calculate_due_date()` - Calculate the days due for the borrowed book
+
+#### Library Operations/Events (5 Functions)
+- `search_books()` - Search books by title, keyword, or author
+- `validate_isbn()` - To check if ISBN-10 or ISBN-13 is valid
+- `overdue_books()` - Identify books past it's due date
+- `event_type()` - Type of library event
+- `send_overdue_notification()` - Notify members of overdue books
+
 
 ## Team Roles and Contributions
 Mariam Diaby: 
