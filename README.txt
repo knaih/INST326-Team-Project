@@ -9,12 +9,23 @@ The project focuses on the domain of Library and Information Management. It focu
 
 ## Problem Statement
 Librarians struggle with:
-Tracking Overdue books
+Tracking Overdue Books
 Inaccurate Inventory(what’s in stock and out of stock)
 Memberships are not being paid for
 Keep track of events (private and public)
 
 ## Installation and Setup
+1. Clone this repository:
+```bash
+git clone https://github.com/knaih/INST326-Team-Project/tree/main
+cd
+```
+
+2. No external dependencies required - uses Python standard library only
+
+3. Import functions in your Python code:
+```python
+from [] import add_books, search_books, validate_isbn
 
 ## Usage Examples For Key Functions
 
@@ -22,7 +33,7 @@ Keep track of events (private and public)
 
 
 ## Team Roles and Contributions
-Mariam Diaby: Project Overview
+Mariam Diaby: 
 Kaelyn Naih: 
 Vainqueur Mukenyi: 
 Anyi Tasong:
