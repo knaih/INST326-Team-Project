@@ -33,9 +33,10 @@ from [] import add_books, search_books, validate_isbn
 
 Our library contains  15 specialized functions organized into four categories:
 
-#### Inventory Management (6 Functions)
+#### Inventory Management (7 Functions)
 - `total_books()` - Count total number of books in the library
 - `book_titles()` - Return a list of all book titles
+- `author_name()` - Validate author name
 - `add_books()` - Add any new books to the inventory
 -`remove_books()` - Remove a book from the inventory using ISBN
 - `update_book_info()` - Update a book's details based on ISBN
