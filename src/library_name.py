@@ -34,7 +34,31 @@ def list_events_by_type(events_list, event_type):
 
 
 #Mariam
-total_books
-add_books
-remove_books
-search_books
+def total_books(library):
+    return len(library)
+
+def add_books(library, title, authot, isbn):
+    new_nook = {
+        "title": title,
+        "author": author,
+        "isbn": isbn,
+        "available": True
+    }
+    library.append(new_book)
+    return library
+
+def remove_books(library, isbn):
+    for book in library:
+        if book["isbn"] == isbn:
+            library.remove(book)
+            return True
+    return False
+
+def search_books(library, keyword):
+    keyword = keyword.lower()
+    results = [
+        book for book in library
+        if keyword in book["title"].lower() or keyword in book["author"].lower()
+    ]
+    return results
+
