@@ -75,10 +75,19 @@ Our library contains  15 specialized functions organized into four categories:
 
 
 ## Team Roles and Contributions
-Mariam Diaby: 
-Kaelyn Naih: 
-Vainqueur Mukenyi: 
-Anyi Tasong:
+Mariam Diaby: Developer 
+Kaelyn Naih: Team Lead 
+Vainqueur Mukenyi: Developer 
+Anyi Tasong: Developer , Member management function / Repo setup and documentaton.
+
+##Code Review Process
+- All Functions have been reviewed by one team member.
+
+
+## AI Collaboration 
+- Used AI to properly understand what the assignment was asking for.
+- Constructed Function_Reference.
+- Generated examples for us to go off of as a team.
 
 ## Repository Structure
 library-management-library/
