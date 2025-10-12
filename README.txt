@@ -28,7 +28,26 @@ cd
 from [] import add_books, search_books, validate_isbn
 
 ## Usage Examples For Key Functions
+inventory = []
+add_books(inventory, [
+    {"isbn": "9780306406157", "title": "The Great Gatsby", "author": "F. Scott Fitzgerald"},
+    {"isbn": "9780143127741", "title": "To Kill a Mockingbird", "author": "Harper Lee"},
+])
 
+# Search for books by title or author
+results = search_books(inventory, "Gatsby")
+print("Search results:", results)
+
+# Calculate due date for a borrowed book
+borrow_date = date(2025, 10, 12)
+due_date = calculate_due_date(borrow_date, 14)
+print("Due date:", due_date)
+
+# Compute fine for a late return
+print("Fine owed: $", fine_amount(3))
+
+# Send overdue notification to member
+send_overdue_notification(member_id="M001", book_title="The Great Gatsby")
 ## Function Library Overview/Organization
 
 Our library contains  15 specialized functions organized into four categories:
@@ -60,3 +79,16 @@ Mariam Diaby:
 Kaelyn Naih: 
 Vainqueur Mukenyi: 
 Anyi Tasong:
+
+## Repository Structure
+library-management-library/
+├── README.md                  
+├── src/                       
+│   ├── __init__.py            
+│   └── library_functions.py   
+├── docs/                      
+│   ├── function_reference.md  
+│   └── usage_examples.md      
+├── examples/                  
+│   └── demo_script.py         
+└── requirements.txt           
