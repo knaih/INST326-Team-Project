@@ -73,3 +73,44 @@ def send_overdue_notification(member, book_title, due_date):
     )
     return notification
  
+#Anyi 
+def book_titles(inventory: list) -> list:
+    if not isinstance(inventory, list):
+        raise TypeError("Inventory must be provided as a list of dictionaries.")
+
+titles = []
+for book in inventory:
+    if not isinstance(book, dict):
+        raise TypeError("Each inventory item must be a dictionary.")
+    if "title" not in book:
+        raise KeyError("Missing 'title' key in one of the book entries.")
+    titles.append(book["title"])
+
+return titles
+
+def author_name(name: str) -> str:
+    if not isinstance(name, str):
+        raise TypeError("Author name must be a string.")
+
+    cleaned = name.strip()
+    if not cleaned:
+        raise ValueError("Author name cannot be empty.")
+
+    # Allow alphabetic characters, spaces, and periods
+    import re
+    if not re.match(r"^[A-Za-z\s\.\-]+$", cleaned):
+        raise ValueError("Author name contains invalid characters.")
+
+    # Return normalized title-cased version
+    return cleaned.title()
+
+def fine_amount(days_overdue: int, rate_per_day: float = 0.50) -> float:
+     if not isinstance(days_overdue, (int, float)):
+        raise TypeError("Days overdue must be an integer or float.")
+    if not isinstance(rate_per_day, (int, float)):
+        raise TypeError("Rate per day must be a number.")
+    if days_overdue < 0:
+        raise ValueError("Days overdue cannot be negative.")
+
+    return round(days_overdue * rate_per_day, 2)
+    
