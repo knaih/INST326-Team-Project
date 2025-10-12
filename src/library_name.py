@@ -62,3 +62,14 @@ def search_books(library, keyword):
     ]
     return results
 
+
+#Vainqueur
+def validate_isbn(isbn):
+    
+def send_overdue_notification(member, book_title, due_date):
+    notification = (
+        f"{member['name']}, our records show you have not returned '{book_title}'.\n"
+        f"The due date was {due_date}. To avoid further penalties, please return the book as soon as you can."
+    )
+    return notification
+ 
