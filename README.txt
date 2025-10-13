@@ -69,8 +69,8 @@ Our library contains  15 specialized functions organized into four categories:
 #### Library Operations/Events (5 Functions)
 - `search_books()` - Search books by title, keyword, or author
 - `validate_isbn()` - To check if ISBN-10 or ISBN-13 is valid
-- `overdue_books()` - Identify books past it's due date
-- `event_type()` - Type of library event
+- `get_overdue_books()` - Identify books past it's due date
+- `list_events_by_type()` - Type of library event
 - `send_overdue_notification()` - Notify members of overdue books
 
 
