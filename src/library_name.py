@@ -64,12 +64,27 @@ def search_books(library, keyword):
 
 
 #Vainqueur
-def search_author(library):
-    author_name = input("Enter Author's Name: ").lower()
-    results = []
+def issue_books(library, library_records, isbn, member, issue_date, due_date):
+    if member['status'] != 'active':
+        return f"Member {member['name']} is inactive.
+        
     for book in library:
-        if author_name in book['author'].lower(): 
-            results.append(book)
+        if book['isbn'] == isbn:
+        if not book['available']:
+                return f"The book '{book['title']}' is currently not available."
+
+        record = {
+                'member_id': member['id'],
+                'title': book['title'],
+                'isbn': book['isbn'],
+                'issue_date': issue_date,
+                'due_date': due_date
+            }
+            library_records.append(record)
+            return f"Book '{book['title']}' has been issued to {member['name']}."
+
+        return "Book currently unavailable
+
 
 def update_book_info(library, isbn, updated_book):
     for book in library:
