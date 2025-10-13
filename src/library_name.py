@@ -64,11 +64,44 @@ def search_books(library, keyword):
 
 
 #Vainqueur
-def validate_isbn(isbn):
+def search_author(library):
+    author_name = input("Enter Author's Name: ").lower()
+    results = []
+    for book in library:
+        if author_name in book['author'].lower(): 
+            results.append(book)
+
+def update_book_info(library, isbn, updated_book):
+    for book in library:
+        if book.get("isbn") == isbn:
+            book.update(update_book)
+            return True
+        return False
+
+def validate_isbn(isbn, year):
+    isbn = isbn.replace("-", "").replace(" ", "")
     
-def send_overdue_notification(member, book_title, due_date):
+    if year <= 2006:
+        if len(isbn) != 10:
+            return False
+    elif year >= 2007:
+        if len(isbn) != 13:
+            return False
+    
+    return True
+         
+def send_overdue_notification(member, overdue_books):
+    if not overdue_books:
+        return None
+    
+    book_list = ""
+    for book in overdue_books:
+        book_list += f"{book['title']} (due on {book['due_date']})\n"
+        
     notification = (
-        f"{member['name']}, our records show you have not returned '{book_title}'.\n"
+        f"{member['name']}, \n\n"
+        f" our records show you have not returned the following.\n"
+        f"{book_list}\n\n"
         f"The due date was {due_date}. To avoid further penalties, please return the book as soon as you can."
     )
     return notification
