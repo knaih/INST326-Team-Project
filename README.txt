@@ -93,8 +93,9 @@ Anyi Tasong: Developer , Member management function / Repo setup and documentato
 library-management-library/
 ├── README.md                  
 ├── src/                       
-│   ├── __init__.py            
-│   └── library_functions.py   
+│   ├── __init__.py  
+│   ├── library_functions.py     
+│   └── library_item.py   
 ├── docs/                      
 │   ├── function_reference.md  
 │   └── usage_examples.md      
