@@ -94,8 +94,12 @@ library-management-library/
 ├── README.md                  
 ├── src/                       
 │   ├── __init__.py  
-│   ├── library_functions.py     
-│   └── library_item.py   
+│   ├── library_items.py
+│   ├── member.py
+│   ├── loan.py
+│   ├── library.py
+│   ├── event.py
+│   └── library_functions.py   
 ├── docs/                      
 │   ├── function_reference.md  
 │   └── usage_examples.md      
