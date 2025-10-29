@@ -43,3 +43,29 @@ def return_date(self,value):
   if value < self._issue_date:
     raise ValueError("Return date cannot be before issue date")
     self._return_date = value
+
+def mark_returned(self, return_date):
+  self.return_date = return_date
+
+def is_overdue(self, current_day):
+  if self._return_date:
+    return self._return_date > self._due_date
+    return current_day > self._due_date
+
+def calculate_fine(self, current_day, rate_per_day= 5):
+  if self.is_overdue(current_day):
+    overdue_days = (current_day - self._due_date).days
+    return round(overdue_days * rate_per_day, 2)
+    return 0.0
+
+def __str__(self):
+  status = (
+    f"Returned on {self._return_date}"
+    if self._return_date
+    else f"Due on {self._due_date}"
+  )
+  return f"{self._book_title} (Member: {self._member_id}) - {status}"
+
+def __repr__(self):
+  return f"Loan({self._member_id}, {self._book_title}, {self._issue_date}, {self._due_date})"
+  
