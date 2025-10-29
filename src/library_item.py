@@ -1,32 +1,52 @@
-class Library:
-  
-    def __init__(self):
-        # List to store all books
-        self._inventory = []
-        # List to store all loan records
-        self._records = []
+class LibraryItem:
 
-    def add_book(self, book: LibraryItem):
-        # Add a book to the inventory
-        if not isinstance(book, LibraryItem):
-            raise ValueError("Can only add LibraryItem objects")
-        self._inventory.append(book)
+    def __init__(self, title: str, author: str, isbn: str, available: bool = True):
+        self._title = title          # Book title
+        self._author = author        # Book author
+        self._isbn = isbn            # Book ISBN number
+        self._available = available  # Availability status
 
-    def remove_book(self, isbn: str) -> bool:
-        # Remove a book by ISBN
-        for book in self._inventory:
-            if book.isbn == isbn:
-                self._inventory.remove(book)
-                return True
-        return False
+    @property
+    def title(self) -> str:
+        """Return the book title."""
+        return self._title
 
-    def search_books(self, keyword: str) -> list:
-        # Search for books by title or author (case-insensitive)
-        keyword = keyword.lower()
-        return [
-            book for book in self._inventory
-            if keyword in book.title.lower() or keyword in book.author.lower()
-        ]
+    @property
+    def author(self) -> str:
+        """Return the book author."""
+        return self._author
+
+    @property
+    def isbn(self) -> str:
+        """Return the book ISBN."""
+        return self._isbn
+
+    @property
+    def available(self) -> bool:
+        """Return whether the book is available."""
+        return self._available
+
+    def check_availability(self) -> bool:
+        """Check if the book is available."""
+        return self._available
+
+    def update_info(self, title: str = None, author: str = None, isbn: str = None):
+        """Update the book information."""
+        if title:
+            self._title = title
+        if author:
+            self._author = author
+        if isbn:
+            self._isbn = isbn
+
+    def __str__(self) -> str:
+        """Return a human-readable string for the book."""
+        status = "Available" if self._available else "Checked out"
+        return f"{self._title} by {self._author} ({status})"
+
+    def __repr__(self) -> str:
+        """Return a detailed representation for debugging."""
+        return f"LibraryItem(title={self._title!r}, author={self._author!r}, isbn={self._isbn!r}, available={self._available!r})"
 
     def total_books(self) -> int:
         # Return total number of books
