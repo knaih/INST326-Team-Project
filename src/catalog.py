@@ -1,2 +1,3 @@
 class Catalog:
-    def __init__(self, catalog_name, items=None):
+    def __init__(self):
+        self._items[]
