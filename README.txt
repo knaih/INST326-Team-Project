@@ -4,6 +4,20 @@
 **Domain:** Library Management System  
 **Course:** INST326 - Object-Oriented Programming for Information Science  
 
+Project Overview
+This library system is built using advanced OOP principles. It manages:
+- Books and Audiobooks
+- Library members
+- Loans of items to members
+
+Key OOP concepts demonstrated:
+- **Inheritance**: LibraryItem → Book / AudioBook  
+- **Polymorphism**: `__str__` behaves differently for each subclass  
+- **Abstract Class**: AbstractLibraryItem ensures a common interface  
+- **Composition**: Members have Loans, Loans contain LibraryItems  
+
+
+
 ## Project Overview (Domain Focus/Problem Statement)
 The project focuses on the domain of Library and Information Management. It focuses on building a system that helps librarians manage and track inventory, memberships, and events efficiently. This system aims to automate library operations such as updating inventory, tracking memberships, due dates, and event types to improve accuracy, organization, and accessibility in a library.
 
