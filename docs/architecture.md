@@ -5,6 +5,6 @@ The system manages library items such as books and audiobooks, tracks loans, and
 
 ---
 
-## 2. Inheritance Hierarchy
+Inheritance Hierarchy
 
-### Class Diagram (Inheritance)
+ Class Diagram (Inheritance)
