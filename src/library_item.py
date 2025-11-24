@@ -73,3 +73,14 @@ class AudioBook(LibraryItem):
     def __str__(self):
         base = super().__str__()
         return f"Audiobook — {base}, Narrator: {self.narrator}, Duration: {self.duration_minutes} mins"
+from abc import ABC, abstractmethod
+
+class AbstractLibraryItem(ABC):
+
+    @abstractmethod
+    def check_availability(self):
+        pass
+
+    @abstractmethod
+    def __str__(self):
+        pass
