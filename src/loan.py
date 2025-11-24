@@ -1,5 +1,4 @@
 #loan.py
-#Mariam Diaby
 
 from datetime import date
 
@@ -44,6 +43,9 @@ def return_date(self,value):
     raise ValueError("Return date cannot be before issue date")
     self._return_date = value
 
+def receipt_line(self):
+  return f"{self._book_title} - due {self._due_date.strftime('%Y-%m-%d')}"
+
 def mark_returned(self, return_date):
   self.return_date = return_date
 
@@ -52,11 +54,14 @@ def is_overdue(self, current_day):
     return self._return_date > self._due_date
     return current_day > self._due_date
 
-def calculate_fine(self, current_day, rate_per_day= 5):
-  if self.is_overdue(current_day):
-    overdue_days = (current_day - self._due_date).days
-    return round(overdue_days * rate_per_day, 2)
-    return 0.0
+def days_late(self, current_day):
+  if not self.is_overdue(current_day):
+    return
+
+  if self._return_date is not None:
+    return (self._return_date - self._due_date).days
+
+  return (current_day - self._due_date).days
 
 def __str__(self):
   status = (
