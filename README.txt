@@ -105,12 +105,15 @@ Anyi Tasong: Developer , Member management function / Repo setup and documentato
 
 ## Repository Structure
 library-management-library/
-├── README.md                  
+├── README.md
+├── data/
+│   └── library_data.json
 ├── src/                       
 │   ├── __init__.py  
 │   ├── library_items.py
 │   ├── member.py
 │   ├── loan.py
+│   ├── persistence.py
 │   ├── library.py
 │   ├── event.py
 │   └── library_functions.py   
@@ -119,4 +122,4 @@ library-management-library/
 │   └── usage_examples.md      
 ├── examples/                  
 │   └── demo_script.py         
-└── requirements.txt           
+└── requirements.txt         
