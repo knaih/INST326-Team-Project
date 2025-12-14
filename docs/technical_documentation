@@ -1,0 +1,8 @@
+# Technical Documentation
+
+## Architecture Overview
+The Library Management System is organized into modules that have a specific task to perform, allowing the system to read, update, and fix more easily. Each file handles one main responsibility, which is either handling books, members, loans, or events that are then worked together to complete other tasks like checking out books, tracking due dates, and more that allow complete library workflow.
+
+## Module Responsibilities
+**library_items.py** Defines items stored in the library such as books, audiobooks, etc.
+**member.py**
