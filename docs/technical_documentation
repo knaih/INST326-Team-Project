@@ -6,8 +6,22 @@ The Library Management System is organized into modules that have a specific tas
 ## Module Responsibilities
 **library_items.py**: Defines items stored in the library, such as books, audiobooks, etc.
 **member.py**: Manages library member data and membership status.
-**loan.py**: Handles the amount a member is past due by, tracks returns, and due dates.
-**library.py**: Whole library system that includes inventory, members, and loans.
+**loan.py**: Handles the amount a member is past due, tracks returns, and manages due dates.
+**library.py**: The entire library system, including inventory, members, and loans.
 **event.py**: Manages public and private library events.
 **library_functions.py**: Shows functions used across the library system.
-**persistence.py**:
+**persistence.py**: Handles saving and loading system data using JSON files.
+
+## Key Design Decisions
+- Designed using object-oriented programming to clearly model real-world library items. (books, members, loans)
+- Code split into different files to ensure parts of the system have one main task.
+- JSON files are used to save data, making it simple and easy to use with Python.
+
+## Error Handling
+- Handles common problems like missing or invalid data.
+- Input validation is used to ensure correct ISBNs, dates, and membership status.
+
+## Known Limitations
+- System doesn't use a graphical user interface.
+- Designed for single-user use.
+- Data is stored locally.
