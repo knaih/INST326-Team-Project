@@ -1,0 +1,18 @@
+# Testing Documentation
+
+## Testing Strategy
+This Library Management Project uses three levels of testing to ensure that the system works correctly.
+1. Unit Tests - Testing individual functions.
+2. Integration Tests - Checks whether parts of the system work together.
+3. System Tests - Verifies a complete workflow of the functions from start to finish.
+
+## Test Coverage
+- Unit tests cover the functions related to member management, library operations, and inventory management.
+- Integration tests check the interactions between inventory, loans, members, and persistence features.
+- System tests verify full workflows in calculating due dates, reloading data, borrowing items, and saving data.
+
+## Text Execution
+All of the tests are conducted using Python's `unittext` framework, which can be run through this command:
+
+```bash
+python -m unittest discover
