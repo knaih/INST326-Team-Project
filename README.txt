@@ -4,42 +4,39 @@
 **Domain:** Library Management System  
 **Course:** INST326 - Object-Oriented Programming for Information Science  
 
-Project Overview
-This library system is built using advanced OOP principles. It manages:
-- Books and Audiobooks
-- Library members
-- Loans of items to members
-
-Key OOP concepts demonstrated:
-- **Inheritance**: LibraryItem → Book / AudioBook  
-- **Polymorphism**: `__str__` behaves differently for each subclass  
-- **Abstract Class**: AbstractLibraryItem ensures a common interface  
-- **Composition**: Members have Loans, Loans contain LibraryItems  
-
-
-
 ## Project Overview (Domain Focus/Problem Statement)
 The project focuses on the domain of Library and Information Management. It focuses on building a system that helps librarians manage and track inventory, memberships, and events efficiently. This system aims to automate library operations such as updating inventory, tracking memberships, due dates, and event types to improve accuracy, organization, and accessibility in a library.
 
 ## Problem Statement
 Librarians struggle with:
-Tracking Overdue Books
-Inaccurate Inventory(what’s in stock and out of stock)
-Memberships are not being paid for
-Keep track of events (private and public)
+- Tracking Overdue Books
+- Inaccurate Inventory(what’s in stock and out of stock)
+- Managing active and inactive memberships
+- Keeping track of events (private and public)
+
+## Key OOP concepts demonstrated:
+- **Inheritance**: LibraryItem → Book / AudioBook  
+- **Polymorphism**: `__str__` behaves differently for each subclass  
+- **Abstract Class**: AbstractLibraryItem ensures a common interface  
+- **Composition**: Members have Loans, Loans contain LibraryItems  
 
 ## Installation and Setup
 1. Clone this repository:
 ```bash
-git clone https://github.com/knaih/INST326-Team-Project/tree/main
-cd
+git clone https://github.com/knaih/INST326-Team-Project.git
+cd INST326-Team-Project
 ```
 
 2. No external dependencies required - uses Python standard library only
 
 3. Import functions in your Python code:
 ```python
-from [] import add_books, search_books, validate_isbn
+from src.library_functions import add_books, search_books, validate_isbn, calculate_due_date, fine_amount
+
+## Running Tests
+To run all unit, integration, and system tests, use:
+```bash
+python -m unittest discover
 
 ## Usage Examples For Key Functions
 inventory = []
@@ -89,12 +86,12 @@ Our library contains  15 specialized functions organized into four categories:
 
 
 ## Team Roles and Contributions
-Mariam Diaby: Developer 
+Mariam Diaby: Developer and feature implementation
 Kaelyn Naih: Team Lead 
 Vainqueur Mukenyi: Developer 
 Anyi Tasong: Developer , Member management function / Repo setup and documentaton.
 
-##Code Review Process
+## Code Review Process
 - All Functions have been reviewed by one team member.
 
 
@@ -102,6 +99,9 @@ Anyi Tasong: Developer , Member management function / Repo setup and documentato
 - Used AI to properly understand what the assignment was asking for.
 - Constructed Function_Reference.
 - Generated examples for us to go off of as a team.
+
+## Video Presentation
+Video Link: ()
 
 ## Repository Structure
 library-management-library/
