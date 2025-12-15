@@ -123,3 +123,33 @@ library-management-library/
 ├── examples/                  
 │   └── demo_script.py         
 └── requirements.txt         
+
+## Testing Strategy
+
+Our testing approach follows three levels of validation:
+
+### Unit Tests
+- Verify individual functions such as adding/removing books and members.
+- Focus on input validation and edge cases.
+
+### Integration Tests
+- Validate interaction between modules (inventory, members, events).
+- Ensure data flows correctly across components.
+
+### System Tests
+- Test complete end-to-end workflows that reflect real user actions.
+- Workflows include:
+  - Member registration and persistence
+  - Book borrowing and inventory updates
+  - Save and load system state
+  - Import and export functionality
+
+System tests are implemented in:
+tests/test_system_workflows.py
+
+### Running Tests
+To run all tests:
+```bash
+pytest
+```md
+See docs/testing.md for detailed testing coverage.
