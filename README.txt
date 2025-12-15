@@ -101,7 +101,7 @@ Anyi Tasong: Developer , Member management function / Repo setup and documentato
 - Generated examples for us to go off of as a team.
 
 ## Video Presentation
-Video Link: ()
+Video Link: https://youtu.be/AOifzmc3bX4
 
 ## Repository Structure
 library-management-library/
